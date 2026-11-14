@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trajectoryforge"
+version = "0.1.0"
+description = "Turn agent failures into reproducible RL tasks, robust verifiers, and replay evidence"
+requires-python = ">=3.11"
+readme = "README.md"
+authors = [{name = "Tabish Syed"}]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+trajectoryforge = "trajectoryforge.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["trajectoryforge*"]
